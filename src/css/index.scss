@@ -1,0 +1,128 @@
+@import "./base.scss";
+@mixin base-flex ($row){
+    display: flex;
+    flex-direction: $row;
+}
+.main{
+    width: $main-with;
+    margin: 0 auto;
+    @include base-flex(row);
+    .left{
+        background: #eeeeee;
+        width: 1.5rem;
+        padding: .1rem;
+        font-size: .14rem;
+        margin-right: .1rem;
+        .serach{
+            input{
+                outline: none;
+                width: 1rem;
+                border: .01rem solid #aaa;
+                border-radius: .03rem;
+                padding: .05rem;
+                color: #666;
+            }
+            span{
+                padding: .03rem .07rem;
+                border: .01rem solid #aaa;
+                border-radius: .03rem;
+                color: #666;
+                cursor: pointer;
+            }
+        }
+        ul{
+            li{
+                @include base-flex(row);
+                margin-top: .1rem;
+                cursor: pointer;
+                font-size: 0.12rem;
+                span{
+                    width: .4rem;
+                    height: .4rem;
+                    display: inline;
+                    background: #666;
+                    border-radius: .03rem;
+                    margin-right: .1rem;
+                }
+                div{
+                    flex-grow: 1;
+                    p{
+                        color:#000;
+                        &:last-child{
+                            color: #666;
+                        }
+                    }
+                }
+                &:hover{
+                    background: rgba(109, 106, 106,.7);
+                }
+            }
+        }
+    }
+    .right{
+        flex-grow: 1;
+        font-size: .14rem;
+        padding: .1rem;
+        background: rgb(216, 213, 213);
+        h6{
+            width: 100%;
+            font-size: .14rem;
+            padding: .1rem 0;
+            border-bottom: 1px solid #f00;
+        }
+        ul{
+            padding: .1rem 0;
+            .you{
+                @include base-flex(row);
+                margin-top: .1rem;
+                span{
+                    display: inline;
+                    width: .4rem;
+                    height: .4rem;
+                    margin-right: .1rem;
+                    border-radius: 50%;
+                    background: #666;
+                }
+                p{
+                    max-width: 6.85rem;
+                    background: #fff;
+                    border-radius: .05rem;
+                    padding: .08rem;
+                    position: relative;
+                    span{
+                        position: absolute;
+                        top: .15rem;
+                        width: 0;
+                        height: 0;
+                        border-radius: 0;
+                        background: #d8d5d500;
+                        border: .05rem solid;
+                        &.san{
+                            left: -.1rem;
+                            border-color: #d8d5d500 #fff #d8d5d500 #d8d5d500;
+                        }  
+                    }
+                }
+            }
+            .me{
+                @extend .you;
+                justify-content: flex-end;
+                span{
+                    order: 1;
+                    margin-right: 0;
+                    margin-left: .1rem;
+                }
+                p{
+                    span{
+                        &.sanme{
+                            right: -.1rem;
+                            border-color: #d8d5d500 #d8d5d500  #d8d5d500 #fff;
+                        }  
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}

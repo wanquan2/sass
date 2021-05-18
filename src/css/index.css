@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  font-size: 100px;
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 80px;
+  }
+}
+.main {
+  width: 10rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.main .left {
+  background: #eeeeee;
+  width: 1.5rem;
+  padding: 0.1rem;
+  font-size: 0.14rem;
+  margin-right: 0.1rem;
+}
+.main .left .serach input {
+  outline: none;
+  width: 1rem;
+  border: 0.01rem solid #aaa;
+  border-radius: 0.03rem;
+  padding: 0.05rem;
+  color: #666;
+}
+.main .left .serach span {
+  padding: 0.03rem 0.07rem;
+  border: 0.01rem solid #aaa;
+  border-radius: 0.03rem;
+  color: #666;
+  cursor: pointer;
+}
+.main .left ul li {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.1rem;
+  cursor: pointer;
+  font-size: 0.12rem;
+}
+.main .left ul li span {
+  width: 0.4rem;
+  height: 0.4rem;
+  display: inline;
+  background: #666;
+  border-radius: 0.03rem;
+  margin-right: 0.1rem;
+}
+.main .left ul li div {
+  flex-grow: 1;
+}
+.main .left ul li div p {
+  color: #000;
+}
+.main .left ul li div p:last-child {
+  color: #666;
+}
+.main .left ul li:hover {
+  background: rgba(109, 106, 106, 0.7);
+}
+.main .right {
+  flex-grow: 1;
+  font-size: 0.14rem;
+  padding: 0.1rem;
+  background: #d8d5d5;
+}
+.main .right h6 {
+  width: 100%;
+  font-size: 0.14rem;
+  padding: 0.1rem 0;
+  border-bottom: 1px solid #f00;
+}
+.main .right ul {
+  padding: 0.1rem 0;
+}
+.main .right ul .you, .main .right ul .me {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.1rem;
+}
+.main .right ul .you span, .main .right ul .me span {
+  display: inline;
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-right: 0.1rem;
+  border-radius: 50%;
+  background: #666;
+}
+.main .right ul .you p, .main .right ul .me p {
+  max-width: 6.85rem;
+  background: #fff;
+  border-radius: 0.05rem;
+  padding: 0.08rem;
+  position: relative;
+}
+.main .right ul .you p span, .main .right ul .me p span {
+  position: absolute;
+  top: 0.15rem;
+  width: 0;
+  height: 0;
+  border-radius: 0;
+  background: #d8d5d500;
+  border: 0.05rem solid;
+}
+.main .right ul .you p span.san, .main .right ul .me p span.san {
+  left: -0.1rem;
+  border-color: #d8d5d500 #fff #d8d5d500 #d8d5d500;
+}
+.main .right ul .me {
+  justify-content: flex-end;
+}
+.main .right ul .me span {
+  order: 1;
+  margin-right: 0;
+  margin-left: 0.1rem;
+}
+.main .right ul .me p span.sanme {
+  right: -0.1rem;
+  border-color: #d8d5d500 #d8d5d500 #d8d5d500 #fff;
+}
+
+/*# sourceMappingURL=index.css.map */
